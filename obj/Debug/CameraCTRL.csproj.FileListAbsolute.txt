@@ -1,0 +1,10 @@
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\bin\Debug\CameraCTRL.exe.config
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\bin\Debug\CameraCTRL.exe
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\bin\Debug\CameraCTRL.pdb
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.csprojResolveAssemblyReference.cache
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.Properties.Resources.resources
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.csproj.GenerateResource.Cache
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.exe
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.pdb
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\bin\Debug\OzekiSDK.dll
+C:\xampp\htdocs\CameraCTRL\CameraCTRL\obj\Debug\CameraCTRL.MainForm.resources
