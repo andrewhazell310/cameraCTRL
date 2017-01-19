@@ -32,11 +32,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.logListBox = new System.Windows.Forms.ListBox();
             this.videoViewerWF1 = new Ozeki.Media.VideoViewerWF();
-            this.label4 = new System.Windows.Forms.Label();
-            this.heightText = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.widthText = new System.Windows.Forms.TextBox();
-            this.applyButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button_Connect = new System.Windows.Forms.Button();
             this.button_Disconnect = new System.Windows.Forms.Button();
@@ -69,8 +64,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -78,12 +74,13 @@
             this.groupBox11.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.logListBox);
-            this.groupBox3.Location = new System.Drawing.Point(713, 506);
+            this.groupBox3.Location = new System.Drawing.Point(713, 453);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(450, 123);
             this.groupBox3.TabIndex = 2;
@@ -106,54 +103,12 @@
             this.videoViewerWF1.ForeColor = System.Drawing.Color.Transparent;
             this.videoViewerWF1.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.videoViewerWF1.FullScreenEnabled = true;
-            this.videoViewerWF1.Location = new System.Drawing.Point(12, 12);
+            this.videoViewerWF1.Location = new System.Drawing.Point(12, 39);
             this.videoViewerWF1.Name = "videoViewerWF1";
             this.videoViewerWF1.RotateAngle = 0;
             this.videoViewerWF1.Size = new System.Drawing.Size(640, 480);
             this.videoViewerWF1.TabIndex = 0;
             this.videoViewerWF1.Text = "videoViewerWF1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(717, 454);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Height";
-            // 
-            // heightText
-            // 
-            this.heightText.Location = new System.Drawing.Point(761, 451);
-            this.heightText.Name = "heightText";
-            this.heightText.Size = new System.Drawing.Size(100, 20);
-            this.heightText.TabIndex = 11;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(866, 454);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Width";
-            // 
-            // widthText
-            // 
-            this.widthText.Location = new System.Drawing.Point(915, 451);
-            this.widthText.Name = "widthText";
-            this.widthText.Size = new System.Drawing.Size(100, 20);
-            this.widthText.TabIndex = 13;
-            // 
-            // applyButton
-            // 
-            this.applyButton.Location = new System.Drawing.Point(1022, 449);
-            this.applyButton.Name = "applyButton";
-            this.applyButton.Size = new System.Drawing.Size(75, 23);
-            this.applyButton.TabIndex = 14;
-            this.applyButton.Text = "Apply";
-            this.applyButton.UseVisualStyleBackColor = true;
-            this.applyButton.Click += new System.EventHandler(this.applyButton_Click);
             // 
             // groupBox1
             // 
@@ -162,7 +117,7 @@
             this.groupBox1.Controls.Add(this.tb_cameraUrl);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.btn_compose);
-            this.groupBox1.Location = new System.Drawing.Point(713, 12);
+            this.groupBox1.Location = new System.Drawing.Point(713, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(450, 86);
             this.groupBox1.TabIndex = 15;
@@ -227,7 +182,7 @@
             this.groupBox12.Controls.Add(this.button_Home);
             this.groupBox12.Controls.Add(this.button_Left);
             this.groupBox12.Controls.Add(this.button_Up);
-            this.groupBox12.Location = new System.Drawing.Point(913, 196);
+            this.groupBox12.Location = new System.Drawing.Point(913, 215);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(194, 176);
             this.groupBox12.TabIndex = 4;
@@ -292,7 +247,7 @@
             // 
             this.groupBox4.Controls.Add(this.button_ZoomOut);
             this.groupBox4.Controls.Add(this.button_ZoomIn);
-            this.groupBox4.Location = new System.Drawing.Point(913, 378);
+            this.groupBox4.Location = new System.Drawing.Point(913, 397);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(194, 50);
             this.groupBox4.TabIndex = 5;
@@ -330,7 +285,7 @@
             this.groupBox11.Controls.Add(this.comboBox_Direction);
             this.groupBox11.Controls.Add(this.label15);
             this.groupBox11.Controls.Add(this.label17);
-            this.groupBox11.Location = new System.Drawing.Point(713, 196);
+            this.groupBox11.Location = new System.Drawing.Point(713, 215);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(194, 176);
             this.groupBox11.TabIndex = 7;
@@ -413,7 +368,7 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.StreamCombo);
-            this.groupBox13.Location = new System.Drawing.Point(713, 378);
+            this.groupBox13.Location = new System.Drawing.Point(713, 397);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(194, 50);
             this.groupBox13.TabIndex = 16;
@@ -426,12 +381,15 @@
             this.videoViewerWF2.FlipMode = Ozeki.Media.FlipMode.None;
             this.videoViewerWF2.FrameStretch = Ozeki.Media.FrameStretch.Uniform;
             this.videoViewerWF2.FullScreenEnabled = true;
-            this.videoViewerWF2.Location = new System.Drawing.Point(472, 12);
+            this.videoViewerWF2.Location = new System.Drawing.Point(472, 39);
             this.videoViewerWF2.Name = "videoViewerWF2";
             this.videoViewerWF2.RotateAngle = 0;
             this.videoViewerWF2.Size = new System.Drawing.Size(180, 135);
             this.videoViewerWF2.TabIndex = 17;
             this.videoViewerWF2.Text = "videoViewerWF2";
+            this.videoViewerWF2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.videoViewerWF2_MouseDown);
+            this.videoViewerWF2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.videoViewerWF2_MouseMove);
+            this.videoViewerWF2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.videoViewerWF2_MouseUp);
             // 
             // groupBox2
             // 
@@ -440,7 +398,7 @@
             this.groupBox2.Controls.Add(this.textBox1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Location = new System.Drawing.Point(713, 104);
+            this.groupBox2.Location = new System.Drawing.Point(713, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(450, 86);
             this.groupBox2.TabIndex = 18;
@@ -498,34 +456,36 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // panel1
+            // menuStrip1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(470, 525);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 89);
-            this.panel1.TabIndex = 20;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseDown);
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseMove);
-            this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Panel1_MouseUp);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1175, 24);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // textBox2
+            // fileToolStripMenuItem
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 557);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(328, 20);
-            this.textBox2.TabIndex = 21;
-            this.textBox2.Text = "1";
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 587);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1175, 22);
+            this.statusStrip1.TabIndex = 20;
+            this.statusStrip1.Text = "statusStrip1";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 641);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1175, 609);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.videoViewerWF2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.videoViewerWF1);
@@ -534,13 +494,10 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox12);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.applyButton);
-            this.Controls.Add(this.widthText);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.heightText);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -557,17 +514,14 @@
             this.groupBox13.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox heightText;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox widthText;
-        private System.Windows.Forms.Button applyButton;
         private System.Windows.Forms.ListBox logListBox;
         private Ozeki.Media.VideoViewerWF videoViewerWF1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -604,8 +558,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 
